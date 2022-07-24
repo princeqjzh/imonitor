@@ -6,6 +6,7 @@ import com.sun.btrace.annotations.OnMethod;
 import com.sun.btrace.annotations.ProbeClassName;
 import com.sun.btrace.annotations.ProbeMethodName;
 
+
 @BTrace
 public class PrintSame {
 	
