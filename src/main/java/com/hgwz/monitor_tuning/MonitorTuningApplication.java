@@ -1,9 +1,9 @@
-package com.xueqiu.monitor_tuning;
+package com.hgwz.monitor_tuning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
-@ComponentScan(basePackages= {"com.xueqiu.monitor_tuning.controller","com.xueqiu.monitor_tuning.service"})
+@ComponentScan(basePackages= {"com.hgwz.monitor_tuning.controller","com.hgwz.monitor_tuning.service"})
 @SpringBootApplication
 public class MonitorTuningApplication {
 

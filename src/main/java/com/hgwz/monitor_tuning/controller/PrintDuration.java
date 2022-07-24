@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
 import com.sun.btrace.annotations.Duration;
@@ -12,7 +12,7 @@ import com.sun.btrace.annotations.ProbeMethodName;
 public class PrintDuration {
 	//打印耗时超过100ms的方法
 	@OnMethod(
-	        clazz="/com\\.xueqiu\\.monitor_tuning\\.controller\\..*/",
+	        clazz="/com\\.hgwz\\.monitor_tuning\\.controller\\..*/",
 	        method="/.*/",
 	        location=@Location(Kind.RETURN)
 	)
@@ -26,7 +26,7 @@ public class PrintDuration {
 	
 	
 //	@OnMethod(
-//	        clazz="com.xueqiu.monitor_tuning.service.CountService",
+//	        clazz="CountService",
 //	        method="getCount",
 //	        location=@Location(Kind.RETURN)
 //	)

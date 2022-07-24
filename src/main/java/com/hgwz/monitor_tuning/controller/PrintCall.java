@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
 import com.sun.btrace.annotations.Duration;
@@ -19,9 +19,9 @@ public class PrintCall {
 	 * 监控指定函数中所有外部调用的耗时情况
 	 */
 	@OnMethod(
-	        clazz="com.xueqiu.monitor_tuning.controller.BTraceController",
+	        clazz="com.hgwz.monitor_tuning.controller.BTraceController",
 	        method="count",
-	        location=@Location(value=Kind.CALL,clazz="/com.xueqiu.monitor_tuning.service.*/",method="/.*/",where=Where.AFTER)
+	        location=@Location(value=Kind.CALL,clazz="/com.hgwz.monitor_tuning.service.*/",method="/.*/",where=Where.AFTER)
 	)
 	//这里是监控 countService 类中 getCount 方法内的外部方法调用情况并打印出响应时间大于 5 MS 的外部调用方法名 。
 	//通过注入 @TargetInstance 和 @TargetMethodOrField 参数，告诉脚本实际匹配到的外部函数调用的类及方法名(或属性名)
@@ -37,9 +37,9 @@ public class PrintCall {
 	
 //	
 //	//Kind.Call 表示被监控的方法调用了哪些其他方法，例如：
-//	@OnMethod(clazz="com.xueqiu.monitor_tuning.controller.BTraceController",
+//	@OnMethod(clazz="com.hgwz.monitor_tuning.controller.BTraceController",
 //			  method="count",
-//			  location=@Location(value=Kind.CALL,clazz="com.xueqiu.monitor_tuning.service.CountService",method="getCount",where=Where.AFTER))
+//			  location=@Location(value=Kind.CALL,clazz="CountService",method="getCount",where=Where.AFTER))
 //	//@Self表示当前监控的函数所在类，如果是静态类则为空，@TargetInstance 表示函数中调用的方法或属性所在的类，如果是静态方法则为空，@TargetMethodOrField 表示调用的方法或属性，如果要获取执行时间，那么 where 必须设置为 Where.AFTER
 //	public static void printMethodCallTime(@Self Object self,@TargetInstance Object instance,@TargetMethodOrField String methon,@Duration long duration) {
 //		if( duration > 5000000L ){

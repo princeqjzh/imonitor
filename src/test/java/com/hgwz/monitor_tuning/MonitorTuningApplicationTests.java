@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning;
+package com.hgwz.monitor_tuning;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
 import com.sun.btrace.annotations.Kind;
@@ -11,7 +11,7 @@ import com.sun.btrace.annotations.ProbeMethodName;
 public class PrintLine {
 	
 	@OnMethod(
-	        clazz="com.xueqiu.monitor_tuning.controller.BTraceController",
+	        clazz="com.hgwz.monitor_tuning.controller.BTraceController",
 	        method="exception",
 	        location=@Location(value=Kind.LINE,line=55)//什么时候拦截，在55行开始拦截,看第55行有没有被执行;
 	)

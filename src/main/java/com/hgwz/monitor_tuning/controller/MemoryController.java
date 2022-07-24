@@ -1,15 +1,14 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import com.hgwz.monitor_tuning.entry.Metaspace;
+import com.hgwz.monitor_tuning.entry.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.xueqiu.monitor_tuning.entry.Metaspace;
-import com.xueqiu.monitor_tuning.entry.User;
 
 @RestController
 public class MemoryController {
