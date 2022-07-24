@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.AnyType;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
@@ -13,7 +13,7 @@ import com.sun.btrace.annotations.Return;
 public class PrintReturn {
 	
 	@OnMethod(
-	        clazz="com.xueqiu.monitor_tuning.controller.BTraceController",
+	        clazz="com.hgwz.monitor_tuning.controller.BTraceController",
 	        method="arg1",
 	        location=@Location(Kind.RETURN)//获取返回值或执行时间就要用 Kind.Return
 	)

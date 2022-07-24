@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.service;
+package com.hgwz.monitor_tuning.service;
 
 import org.springframework.stereotype.Service;
 

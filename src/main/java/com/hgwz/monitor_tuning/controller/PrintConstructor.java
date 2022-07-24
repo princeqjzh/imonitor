@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.AnyType;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
@@ -12,7 +12,7 @@ import com.sun.btrace.annotations.ProbeMethodName;
 public class PrintConstructor {
 	
 	@OnMethod(
-	        clazz="com.xueqiu.monitor_tuning.entry.User",//因为是要拦截User的构造函数，所以类一定是User类
+	        clazz="com.hgwz.monitor_tuning.entry.User",//因为是要拦截User的构造函数，所以类一定是User类
 	        method="<init>",
 	        location=@Location(Kind.ENTRY)//什么时候拦截，在入口的时候开始拦截
 	)

@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.entry;
+package com.hgwz.monitor_tuning.entry;
 
 import java.util.ArrayList;
 import java.util.List;

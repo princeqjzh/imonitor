@@ -8,7 +8,7 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.xueqiu</groupId>
+	<groupId>com.hgwz</groupId>
 	<artifactId>monitor_tuning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>monitor_tuning</name>

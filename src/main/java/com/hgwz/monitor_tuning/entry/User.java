@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.entry;
+package com.hgwz.monitor_tuning.entry;
 
 public class User {
 	private int id;

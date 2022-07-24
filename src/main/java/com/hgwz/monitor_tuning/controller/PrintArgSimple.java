@@ -1,4 +1,4 @@
-package com.xueqiu.monitor_tuning.controller;
+package com.hgwz.monitor_tuning.controller;
 import com.sun.btrace.AnyType;
 import com.sun.btrace.BTraceUtils;
 import com.sun.btrace.annotations.BTrace;
@@ -12,7 +12,7 @@ import com.sun.btrace.annotations.ProbeMethodName;
 public class PrintArgSimple {
 	
 	@OnMethod(
-	        clazz="com.xueqiu.monitor_tuning.controller.BTraceController",
+	        clazz="com.hgwz.monitor_tuning.controller.BTraceController",
 	        method="arg1",
 	        location=@Location(Kind.ENTRY)//什么时候拦截，在入口的时候开始拦截
 	)
