@@ -2,6 +2,8 @@ package com.hgwz.monitor_tuning.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,6 +49,47 @@ public class CPUController {
 		}).start();
 		
 		return "deadlock";
+	}
+
+	@RequestMapping("/deadlocking")
+	public String deadlocking() {
+		Lock lock1 = new ReentrantLock();
+		Lock lock2 = new ReentrantLock();
+		Thread t1 = new Thread() {
+			@Override
+			public void run() {
+				try {
+					lock1.lock();
+					System.out.println(Thread.currentThread().getName() + " get the lock1");
+					Thread.sleep(1000);
+					lock2.lock();
+					System.out.println(Thread.currentThread().getName() + " get the lock2");
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		Thread t2 = new Thread() {
+			@Override
+			public void run() {
+				try {
+					lock2.lock();
+					System.out.println(Thread.currentThread().getName() + " get the lock2");
+					Thread.sleep(1000);
+					lock1.lock();
+					System.out.println(Thread.currentThread().getName() + " get the lock1");
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		};
+		//设置线程名字，方便分析堆栈信息
+		t1.setName("mythread-t1");
+		t2.setName("mythread-t2");
+		t1.start();
+		t2.start();
+
+		return "Dead Locking";
 	}
 	
 	public static List<Long> getPartneridsFromJson(String data){
