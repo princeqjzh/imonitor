@@ -51,6 +51,12 @@ public class CPUController {
 		return "deadlock";
 	}
 
+	@RequestMapping("/")
+	public String index() {
+
+		return "A root page";
+	}
+
 	@RequestMapping("/deadlocking")
 	public String deadlocking() {
 		Lock lock1 = new ReentrantLock();
