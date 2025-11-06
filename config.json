@@ -1,8 +1,8 @@
 {
   "azure_storage": {
     "user_id": "user1",
-    "client_secret": "zUKEIQ~~~QufadaeIdasadfdsafewwr89rw0e8r0ew98r0weO",
-    "storage_account_name": "abc",
-    "token": "DefaultEndpointProtocol=http;AccountName=abc;AccountKey=oieoajfidafJFdafdas132144jl3i14i34iioo2oooisuowqr"
+    "client_secret": "111",
+    "storage_account_name": "111",
+    "token": "111"
   }
 }
